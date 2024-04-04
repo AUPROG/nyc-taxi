@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: fact_fhv_trips
+    tests:
+      - unique_key:
+          columns: [pickup_datetime, pickup_location, dropoff_location]
+      - not_null:
+          column: pickup_datetime
